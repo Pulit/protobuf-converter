@@ -1,5 +1,6 @@
 package net.badata.protobuf.converter.domain;
 
+import java.util.Map;
 import net.badata.protobuf.converter.annotation.ProtoClass;
 import net.badata.protobuf.converter.annotation.ProtoField;
 import net.badata.protobuf.converter.proto.MappingProto;
@@ -33,6 +34,10 @@ public class MappingDomain {
 		private List<String> simpleListValue;
 		@ProtoField
 		private List<NestedTest> nestedListValue;
+		@ProtoField
+		private Map<String, String> simpleMap;
+		@ProtoField
+		private Map<String, NestedTest> nestedMap;
 
 
 
@@ -106,6 +111,23 @@ public class MappingDomain {
 
 		public void setNestedListValue(final List<NestedTest> nestedListValue) {
 			this.nestedListValue = nestedListValue;
+		}
+
+		public Map<String, String> getSimpleMap() {
+			return simpleMap;
+		}
+
+		public void setSimpleMap(Map<String, String> simpleMap) {
+			this.simpleMap = simpleMap;
+		}
+
+		public Map<String, NestedTest> getNestedMap() {
+			return nestedMap;
+		}
+
+		public void setNestedMap(
+				Map<String, NestedTest> nestedMap) {
+			this.nestedMap = nestedMap;
 		}
 	}
 
